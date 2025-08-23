@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Tiffany’s Bake Shop – Birthday Cakes & Cookies in Bozeman, MT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Tiffany’s Bake Shop makes custom birthday cakes and delicious cookies for pickup or local delivery in Bozeman, Montana." />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tiffany’s Bake Shop – Bozeman, MT" />
+  <meta property="og:description" content="Small-batch birthday cakes & cookies for pickup or local delivery in Bozeman." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/og-cake.jpg" />
+  <meta property="og:url" content="https://your-domain.example" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Local SEO -->
+  <meta name="geo.region" content="US-MT" />
+  <meta name="geo.placename" content="Bozeman" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --bg:#fffdfb;
+      --ink:#1e1b16;
+      --sub:#59544e;
+      --brand:#e88aa3;      /* Strawberry pink */
+      --brand-dark:#d66a87;
+      --accent:#ffd166;     /* Buttercream */
+      --card:#ffffff;
+      --border:#eee5dd;
+      --radius:14px;
+      --shadow:0 6px 24px rgba(30,27,22,.08);
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.6;
+      text-rendering:optimizeLegibility;
+    }
+    a{color:var(--brand); text-decoration:none}
+    a:hover{color:var(--brand-dark); text-decoration:underline}
+
+    /* Header */
+    header{
+      position:sticky; top:0; z-index:50;
+      background:rgba(255,253,251,.8);
+      backdrop-filter: blur(8px);
+      border-bottom:1px solid var(--border);
+    }
+    .nav{
+      max-width:var(--max); margin:auto; padding:10px 18px;
+      display:flex; align-items:center; justify-content:space-between;
+    }
+    .brand{display:flex; align-items:center; gap:10px; font-weight:600}
+    .brand-logo{
+      width:36px; height:36px; border-radius:50%;
+      background: radial-gradient(circle at 30% 30%, var(--accent), var(--brand));
+      display:inline-block;
+      box-shadow: inset 0 0 0 3px #fff, 0 2px 10px rgba(0,0,0,.08);
+    }
+    .nav a.btn{
+      padding:10px 16px; border-radius:999px; background:var(--brand); color:white; font-weight:600; border:0; box-shadow:var(--shadow)
+    }
+    .nav a.btn:hover{background:var(--brand-dark)}
+    .nav .links{display:flex; gap:18px; align-items:center}
+    .nav .links a{font-weight:500; color:var(--ink)}
+    .nav .links a:hover{color:var(--brand-dark)}
+    @media (max-width:720px){
+      .nav .links a.hide-sm{display:none}
+    }
+
+    /* Hero */
+    .hero{
+      max-width:var(--max); margin:32px auto; padding:0 18px;
+      display:grid; grid-template-columns:1.2fr .8fr; gap:24px; align-items:center;
+    }
+    @media (max-width:900px){ .hero{grid-template-columns:1fr} }
+    .hero h1{
+      font-family:Poppins, Inter, sans-serif;
+      line-height:1.15; font-weight:600; font-size:clamp(28px, 4vw, 44px);
+      margin:0 0 10px;
+    }
+    .pill{
+      display:inline-flex; gap:8px; align-items:center;
+      background:#fff; border:1px solid var(--border); color:var(--sub);
+      padding:6px 10px; border-radius:999px; font-size:14px
+    }
+    .hero .cta{display:flex; gap:12px; margin-top:16px; flex-wrap:wrap}
+    .btn{
+      display:inline-flex; align-items:center; gap:10px;
+      border-radius:999px; padding:12px 18px; border:0; cursor:pointer;
+      font-weight:600; transition:transform .03s ease;
+    }
+    .btn:active{transform:translateY(1px)}
+    .btn-primary{background:var(--brand); color:white}
+    .btn-primary:hover{background:var(--brand-dark)}
+    .btn-outline{background:#fff; border:1px solid var(--border); color:var(--ink)}
+    .hero-figure{
+      position:relative; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); background:#f9f3ef;
+      min-height:260px;
+    }
+    .hero-figure img{width:100%; height:100%; object-fit:cover; display:block}
+
+    /* Notice */
+    .notice{
+      max-width:var(--max); margin:8px auto 0; padding:0 18px;
+      color:#674d00; background:#fff7dc; border:1px solid #ffe6a3;
+      border-radius:12px; padding:10px 12px; display:flex; gap:8px; align-items:center;
+    }
+
+    /* Products */
+    section{padding:40px 18px}
+    .wrap{max-width:var(--max); margin:0 auto}
+    h2{
+      font-family:Poppins, Inter, sans-serif;
+      font-size:clamp(22px,3vw,30px); margin:0 0 14px
+    }
+    .sub{color:var(--sub); margin-top:-6px}
+    .grid{
+      display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; margin-top:18px
+    }
+    @media (max-width:1000px){ .grid{grid-template-columns:repeat(2,1fr)} }
+    @media (max-width:640px){ .grid{grid-template-columns:1fr} }
+    .card{
+      background:var(--card); border:1px solid var(--border); border-radius:var(--radius);
+      box-shadow:var(--shadow); overflow:hidden; display:flex; flex-direction:column
+    }
+    .card img{width:100%; height:220px; object-fit:cover; display:block; background:#f3eee9}
+    .card .body{padding:14px}
+    .card h3{margin:0 0 4px; font-size:18px}
+    .price{font-weight:600}
+    .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:8px}
+    .tag{background:#f7f2ef; border:1px solid var(--border); padding:2px 8px; border-radius:999px; font-size:12px; color:var(--sub)}
+
+    /* How to order + FAQ */
+    .steps{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:18px 0}
+    @media (max-width:900px){ .steps{grid-template-columns:1fr} }
+    .step{background:#fff; border:1px solid var(--border); border-radius:12px; padding:14px}
+    details{border:1px solid var(--border); border-radius:12px; padding:12px 14px}
+    details+details{margin-top:10px}
+    summary{font-weight:600; cursor:pointer}
+
+    /* Footer */
+    footer{border-top:1px solid var(--border); padding:28px 18px; background:#fff}
+    .foot{max-width:var(--max); margin:0 auto; display:grid; grid-template-columns:1.2fr .8fr; gap:24px}
+    @media (max-width:900px){ .foot{grid-template-columns:1fr} }
+    .muted{color:var(--sub)}
+    .small{font-size:13px; color:var(--sub)}
+
+    /* Lightbox (very small, no deps) */
+    .lightbox{
+      position:fixed; inset:0; display:none; align-items:center; justify-content:center;
+      background:rgba(0,0,0,.72); z-index:1000
+    }
+    .lightbox.open{display:flex}
+    .lightbox img{max-width:92vw; max-height:86vh; border-radius:12px; box-shadow:0 10px 36px rgba(0,0,0,.5)}
+    .lightbox button{
+      position:absolute; top:14px; right:14px; border:0; background:#fff; border-radius:999px; padding:8px 12px; cursor:pointer; font-weight:600
+    }
+  </style>
+
+  <!-- Local Business Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "Tiffany's Bake Shop",
+    "image": ["https://your-domain.example/images/hero.jpg"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bozeman",
+      "addressRegion": "MT",
+      "addressCountry": "US"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Bozeman"
+    },
+    "servesCuisine": "Desserts",
+    "priceRange": "$$",
+    "url": "https://your-domain.example",
+    "telephone": "+1-406-555-0123"
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <nav class="nav" aria-label="Primary">
+      <div class="brand">
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span>Tiffany’s Bake Shop</span>
+      </div>
+      <div class="links">
+        <a class="hide-sm" href="#cakes">Cakes</a>
+        <a class="hide-sm" href="#cookies">Cookies</a>
+        <a class="hide-sm" href="#order">How to order</a>
+        <a class="btn" href="https://forms.gle/REPLACE_WITH_YOUR_FORM" id="orderBtn">Order now</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <span class="pill" aria-label="Local only">🎈 Made in Bozeman • Local pickup & delivery</span>
+        <h1 id="hero-title">Small-batch birthday cakes & cookies — baked with love in Bozeman, MT</h1>
+        <p class="sub">Customizable flavors, simple designs, and fresh ingredients. View the menu and place your order for your next celebration.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="https://forms.gle/REPLACE_WITH_YOUR_FORM">Start an order</a>
+          <a class="btn btn-outline" href="#cakes">See cakes</a>
+        </div>
+      </div>
+      <figure class="hero-figure">
+        <img src="images/hero.jpg" alt="Pink frosted birthday cake with sprinkles" loading="eager" />
+      </figure>
+    </section>
+
+    <div class="notice" role="note" aria-live="polite">📍
+      <strong>Bozeman only:</strong>&nbsp;We currently serve Bozeman, MT (<a href="#order">pickup or local delivery</a>).
+    </div>
+
+    <!-- Cakes -->
+    <section id="cakes" class="wrap" aria-labelledby="cakes-title">
+      <h2 id="cakes-title">Birthday Cakes</h2>
+      <p class="sub">Choose a flavor and size. Simple custom messages included.</p>
+      <div class="grid">
+        <!-- Card 1 -->
+        <article class="card">
+          <img src="images/cake-vanilla.jpg" alt="6-inch vanilla buttercream cake with rainbow sprinkles" loading="lazy" data-full="images/cake-vanilla.jpg" />
+          <div class="body">
+            <h3>Classic Vanilla</h3>
+            <div class="price">$38 (6”), $56 (8”)</div>
+            <div class="tags">
+              <span class="tag">Vanilla sponge</span>
+              <span class="tag">Buttercream</span>
+              <span class="tag">Nut-free</span>
+            </div>
+          </div>
+        </article>
+        <!-- Card 2 -->
+        <article class="card">
+          <img src="images/cake-chocolate.jpg" alt="Chocolate birthday cake with chocolate shavings" loading="lazy" data-full="images/cake-chocolate.jpg" />
+          <div class="body">
+            <h3>Double Chocolate</h3>
+            <div class="price">$42 (6”), $60 (8”)</div>
+            <div class="tags">
+              <span class="tag">Rich cocoa</span>
+              <span class="tag">Silky ganache</span>
+            </div>
+          </div>
+        </article>
+        <!-- Card 3 -->
+        <article class="card">
+          <img src="images/cake-lemon.jpg" alt="Lemon cake with candied slices on top" loading="lazy" data-full="images/cake-lemon.jpg" />
+          <div class="body">
+            <h3>Lemon Zest</h3>
+            <div class="price">$40 (6”), $58 (8”)</div>
+            <div class="tags">
+              <span class="tag">Citrus curd</span>
+              <span class="tag">Light & bright</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Cookies -->
+    <section id="cookies" class="wrap" aria-labelledby="cookies-title">
+      <h2 id="cookies-title">Cookies</h2>
+      <p class="sub">Sold by the dozen. Mix & match available.</p>
+      <div class="grid">
+        <article class="card">
+          <img src="images/cookie-chocchip.jpg" alt="Chocolate chip cookies on a cooling rack" loading="lazy" data-full="images/cookie-chocchip.jpg" />
+          <div class="body">
+            <h3>Chocolate Chip</h3>
+            <div class="price">$18 / dozen</div>
+            <div class="tags"><span class="tag">Crispy edges</span><span class="tag">Gooey center</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/cookie-sugar.jpg" alt="Frosted sugar cookies with pastel icing" loading="lazy" data-full="images/cookie-sugar.jpg" />
+          <div class="body">
+            <h3>Frosted Sugar</h3>
+            <div class="price">$20 / dozen</div>
+            <div class="tags"><span class="tag">Custom colors</span><span class="tag">Kid favorite</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/cookie-oatmeal.jpg" alt="Oatmeal raisin cookies stacked" loading="lazy" data-full="images/cookie-oatmeal.jpg" />
+          <div class="body">
+            <h3>Oatmeal Raisin</h3>
+            <div class="price">$18 / dozen</div>
+            <div class="tags"><span class="tag">Warm spices</span><span class="tag">Hearty</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- How to order -->
+    <section id="order" class="wrap" aria-labelledby="order-title">
+      <h2 id="order-title">How to order</h2>
+      <div class="steps">
+        <div class="step">
+          <strong>1) Tell us what you’d like</strong>
+          <p>Use the quick form to choose cake size/flavor and pickup or local delivery in Bozeman.</p>
+          <p><a class="btn btn-primary" href="https://forms.gle/REPLACE_WITH_YOUR_FORM">Open order form</a></p>
+        </div>
+        <div class="step">
+          <strong>2) We confirm by text/email</strong>
+          <p>We’ll confirm availability, finalize details, and send payment options.</p>
+        </div>
+        <div class="step">
+          <strong>3) Pickup or delivery</strong>
+          <p>Pickup near downtown Bozeman or local delivery (+$5–$10 depending on distance).</p>
+        </div>
+      </div>
+
+      <details>
+        <summary>Pickup & delivery details</summary>
+        <p><strong>Pickup:</strong> Near downtown Bozeman (exact address provided on confirmation).</p>
+        <p><strong>Delivery:</strong> Within Bozeman city limits. Delivery windows are typically 10am–5pm.</p>
+      </details>
+
+      <details>
+        <summary>Dietary notes</summary>
+        <p>Nut-free options available. We are not a certified allergen-free kitchen.</p>
+      </details>
+
+      <details>
+        <summary>Lead time</summary>
+        <p>Most orders need 48–72 hours’ notice. For rush orders, call or text first.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    <div class="foot">
+      <div>
+        <h3 style="margin-top:0">Tiffany’s Bake Shop</h3>
+        <p class="muted">Bozeman, Montana • Small-batch cakes & cookies</p>
+        <p class="small">Serving <strong>Bozeman, MT</strong> only.</p>
+      </div>
+      <div>
+        <p><strong>Contact</strong></p>
+        <p><a href="tel:+14065550123">(406) 555-0123</a><br/>
+           <a href="mailto:orders@tiffanysbakeshop.com">orders@tiffanysbakeshop.com</a><br/>
+           <a href="https://www.instagram.com/REPLACE_HANDLE" aria-label="Instagram">Instagram</a>
+        </p>
+        <p><a href="https://maps.apple.com/?q=Bozeman%2C%20MT" rel="noopener">Map: Bozeman, MT</a></p>
+      </div>
+    </div>
+    <p class="small" style="max-width:var(--max); margin:10px auto 0">© <span id="year"></span> Tiffany’s Bake Shop. All rights reserved.</p>
+  </footer>
+
+  <!-- Lightweight image lightbox + small enhancements -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+    <button type="button" id="closeLightbox" aria-label="Close">Close ✕</button>
+    <img src="" alt="" />
+  </div>
+
+  <script>
+    // Current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Open external order link in a new tab safely
+    const orderLinks = document.querySelectorAll('a[href*="forms.gle"], a#orderBtn');
+    orderLinks.forEach(a => { a.setAttribute('target','_blank'); a.setAttribute('rel','noopener'); });
+
+    // Simple lightbox for gallery images
+    const lb = document.getElementById('lightbox');
+    const lbImg = lb.querySelector('img');
+    const closeBtn = document.getElementById('closeLightbox');
+
+    document.addEventListener('click', (e) => {
+      const t = e.target.closest('img[data-full]');
+      if(!t) return;
+      lbImg.src = t.getAttribute('data-full');
+      lbImg.alt = t.alt || '';
+      lb.classList.add('open');
+    });
+    closeBtn.addEventListener('click', () => lb.classList.remove('open'));
+    lb.addEventListener('click', (e) => {
+      if(e.target === lb) lb.classList.remove('open');
+    });
+    document.addEventListener('keydown', (e)=>{
+      if(e.key==='Escape') lb.classList.remove('open');
+    });
+  </script>
+</body>
+</html>
