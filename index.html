@@ -140,7 +140,8 @@
     .card img{width:100%; height:220px; object-fit:cover; display:block; background:#f3eee9}
     .card .body{padding:14px}
     .card h3{margin:0 0 4px; font-size:18px}
-    .price{font-weight:600}
+    /* Removed .price; adding description style */
+    .desc{font-size:14px; color:var(--sub); margin:0}
     .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:8px}
     .tag{background:#f7f2ef; border:1px solid var(--border); padding:2px 8px; border-radius:999px; font-size:12px; color:var(--sub)}
 
@@ -235,7 +236,7 @@
           <img src="images/cake-vanilla.jpeg" alt="6-inch vanilla buttercream cake with rainbow sprinkles" loading="lazy" data-full="images/cake-vanilla.jpeg" />
           <div class="body">
             <h3>Cookies and Cream</h3>
-            <div class="price">$38 (6”), $56 (8”)</div
+            <p class="desc">Vanilla sponge layered with Oreo-studded buttercream and a sprinkle of cookie crumble.</p>
           </div>
         </article>
         <!-- Card 2 -->
@@ -243,7 +244,7 @@
           <img src="images/cake-chocolate.jpeg" alt="Chocolate birthday cake with chocolate shavings" loading="lazy" data-full="images/cake-chocolate.jpeg" />
           <div class="body">
             <h3>Chocochocochocolate</h3>
-            <div class="price">$42 (6”), $60 (8”)</div>
+            <p class="desc">Ultra-moist chocolate cake with silky chocolate buttercream and curls of dark chocolate.</p>
           </div>
         </article>
         <!-- Card 3 -->
@@ -251,7 +252,7 @@
           <img src="images/cake-lemon.jpeg" alt="Lemon cake with candied slices on top" loading="lazy" data-full="images/cake-lemon.jpeg" />
           <div class="body">
             <h3>Lemon. Like, really lemon.</h3>
-            <div class="price">$40 (6”), $58 (8”)</div>
+            <p class="desc">Bright lemon layers with zesty curd and whipped lemon buttercream. Tart in the best way.</p>
           </div>
         </article>
         <!-- Card 4 -->
@@ -259,15 +260,15 @@
           <img src="images/cake-lemon.jpeg" alt="Lemon cake with candied slices on top" loading="lazy" data-full="images/cake-lemon.jpeg" />
           <div class="body">
             <h3>White Chocolate Raspberry.</h3>
-            <div class="price">$40 (6”), $58 (8”)</div>
+            <p class="desc">Tender vanilla cake, raspberry jam swirls, and white chocolate buttercream — a classic duo.</p>
           </div>
         </article>
         <!-- Card 5 -->
         <article class="card">
           <img src="images/cake-lemon.jpeg" alt="Lemon cake with candied slices on top" loading="lazy" data-full="images/cake-lemon.jpeg" />
           <div class="body">
-            <h3>I can't believe this is GF Chocoloate</h3>
-            <div class="price">$40 (6”), $58 (8”)</div>
+            <h3>I can't believe this is GF Chocolate</h3>
+            <p class="desc">Gluten-free chocolate cake that’s rich, fudgy, and crowned with creamy cocoa frosting.</p>
           </div>
         </article>
         <!-- Card 6 -->
@@ -275,12 +276,68 @@
           <img src="images/cake-lemon.jpeg" alt="Lemon cake with candied slices on top" loading="lazy" data-full="images/cake-lemon.jpeg" />
           <div class="body">
             <h3>Birthday!</h3>
-            <div class="price">$40 (6”), $58 (8”)</div>
+            <p class="desc">Funfetti vanilla layers with rainbow sprinkles and fluffy vanilla buttercream. Party in a slice.</p>
           </div>
         </article>
       </div>
     </section>
-
+    
+    <!-- Birthday Cakes -->
+    <section id="cakes" class="wrap" aria-labelledby="cakes-title">
+      <h2 id="cakes-title">Signature Cakes</h2>
+      <p class="sub">6&quot; Cake - perfect for a small b-day bash or gift for a friend, your kid at college, or yourself (I won't tell!).</p>
+      <div class="grid">
+        <!-- Card 1 -->
+        <article class="card">
+          <img src="images/cake-vanilla.jpeg" alt="6-inch vanilla buttercream cake with rainbow sprinkles" loading="lazy" data-full="images/cake-vanilla.jpeg" />
+          <div class="body">
+            <h3>Cookies and Cream</h3>
+            <p class="desc">Vanilla sponge layered with Oreo-studded buttercream and a sprinkle of cookie crumble.</p>
+          </div>
+        </article>
+        <!-- Card 2 -->
+        <article class="card">
+          <img src="images/cake-chocolate.jpeg" alt="Chocolate birthday cake with chocolate shavings" loading="lazy" data-full="images/cake-chocolate.jpeg" />
+          <div class="body">
+            <h3>Chocochocochocolate</h3>
+            <p class="desc">Ultra-moist chocolate cake with silky chocolate buttercream and curls of dark chocolate.</p>
+          </div>
+        </article>
+        <!-- Card 3 -->
+        <article class="card">
+          <img src="images/cake-lemon.jpeg" alt="Lemon cake with candied slices on top" loading="lazy" data-full="images/cake-lemon.jpeg" />
+          <div class="body">
+            <h3>Lemon. Like, really lemon.</h3>
+            <p class="desc">Bright lemon layers with zesty curd and whipped lemon buttercream. Tart in the best way.</p>
+          </div>
+        </article>
+        <!-- Card 4 -->
+        <article class="card">
+          <img src="images/cake-lemon.jpeg" alt="Lemon cake with candied slices on top" loading="lazy" data-full="images/cake-lemon.jpeg" />
+          <div class="body">
+            <h3>White Chocolate Raspberry.</h3>
+            <p class="desc">Tender vanilla cake, raspberry jam swirls, and white chocolate buttercream — a classic duo.</p>
+          </div>
+        </article>
+        <!-- Card 5 -->
+        <article class="card">
+          <img src="images/cake-lemon.jpeg" alt="Lemon cake with candied slices on top" loading="lazy" data-full="images/cake-lemon.jpeg" />
+          <div class="body">
+            <h3>I can't believe this is GF Chocolate</h3>
+            <p class="desc">Gluten-free chocolate cake that’s rich, fudgy, and crowned with creamy cocoa frosting.</p>
+          </div>
+        </article>
+        <!-- Card 6 -->
+        <article class="card">
+          <img src="images/cake-lemon.jpeg" alt="Lemon cake with candied slices on top" loading="lazy" data-full="images/cake-lemon.jpeg" />
+          <div class="body">
+            <h3>Birthday!</h3>
+            <p class="desc">Funfetti vanilla layers with rainbow sprinkles and fluffy vanilla buttercream. Party in a slice.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+    
     <!-- How to order -->
     <section id="order" class="wrap" aria-labelledby="order-title">
       <h2 id="order-title">How to order</h2>
@@ -296,7 +353,7 @@
         </div>
         <div class="step">
           <strong>3) Pickup or delivery</strong>
-          <p>Pickup near downtown Bozeman or local delivery (+$5–$10 depending on distance).</p>
+          <p>Pickup near Hyalite Canyon or local delivery (+$10 depending on distance).</p>
         </div>
       </div>
 
