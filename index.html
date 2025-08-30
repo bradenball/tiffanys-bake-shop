@@ -74,7 +74,7 @@
       padding:10px 16px; border-radius:999px; background:var(--brand); color:white; font-weight:600; border:0; box-shadow:var(--shadow)
     }
     .nav a.btn:hover{background:var(--brand-dark)}
-    .nav .links{display:flex; gap:18px; align-items:center}
+    .nav .links{display:flex; gap:18px; align-items:center; flex-wrap:wrap}
     .nav .links a{font-weight:500; color:var(--ink)}
     .nav .links a:hover{color:var(--brand-dark)}
     @media (max-width:720px){
@@ -137,10 +137,9 @@
       background:var(--card); border:1px solid var(--border); border-radius:var(--radius);
       box-shadow:var(--shadow); overflow:hidden; display:flex; flex-direction:column
     }
-    .card img{width:100%; aspect ratio: 1/1; object-fit:cover; display:block; background:#f3eee9}
+    .card img{width:100%; aspect-ratio: 1 / 1; object-fit:cover; display:block; background:#f3eee9}
     .card .body{padding:14px}
     .card h3{margin:0 0 8px; font-size:18px}
-    /* Removed .price; adding description style */
     .desc{font-size:14px; color:var(--sub); margin:0;line-height: 1.5;}
     .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:8px}
     .tag{background:#f7f2ef; border:1px solid var(--border); padding:2px 8px; border-radius:999px; font-size:12px; color:var(--sub)}
@@ -204,7 +203,10 @@
         <span>Tiffany’s Bake Shop</span>
       </div>
       <div class="links">
-        <a class="hide-sm" href="#cakes">Cakes</a>
+        <!-- updated nav items -->
+        <a class="hide-sm" href="#signature-cakes">Signature Cakes</a>
+        <a class="hide-sm" href="#birthday-cakes">Birthday Cakes</a>
+        <a class="hide-sm" href="#cookies">Cookies</a>
         <a class="hide-sm" href="#order">How to order</a>
         <a class="btn" href="https://forms.gle/REPLACE_WITH_YOUR_FORM" id="orderBtn">Order now</a>
       </div>
@@ -222,13 +224,13 @@
         </div>
       </div>
       <figure class="hero-figure">
-        <img src="images/drip-cut.jpg" alt="Yellow cake wiht vanilla frosting and blue drip" loading="eager" />
+        <img src="images/drip-cut.jpg" alt="Yellow cake with vanilla frosting and blue drip" loading="eager" />
       </figure>
     </section>
 
-    <!-- Cakes -->
-    <section id="cakes" class="wrap" aria-labelledby="cakes-title">
-      <h2 id="cakes-title">Signature Cakes</h2>
+    <!-- Signature Cakes (renamed + unique id) -->
+    <section id="signature-cakes" class="wrap" aria-labelledby="signature-cakes-title">
+      <h2 id="signature-cakes-title">Signature Cakes</h2>
       <p class="sub">Choose a flavor and size. Simple custom messages included.</p>
       <div class="grid">
         <!-- Card 1 -->
@@ -281,19 +283,19 @@
         </article>
       </div>
     </section>
-    
-    <!-- Birthday Cakes -->
-    <section id="cakes" class="wrap" aria-labelledby="cakes-title">
-      <h2 id="cakes-title">Birthday Cakes</h2>
-      <p class="sub">Any cake can be a birthday cake, but these 6" cakes are the perfect option for a small b-day bash, as a gift for a friend, to let your kid at college know you're thinking of them, or if you just want to celebrate. <br>
-      Take your pick between chocolate or yellow crumb, chocolate or vanilla frosting, and the extras to celebrate like sprinkles, swirls, and drips.  Or go with one of the signature combinations below that are sure to be a hit!</p>
+
+    <!-- Birthday Cakes (existing content, now with unique id + nav anchor) -->
+    <section id="birthday-cakes" class="wrap" aria-labelledby="birthday-cakes-title">
+      <h2 id="birthday-cakes-title">Birthday Cakes</h2>
+      <p class="sub">Any cake can be a birthday cake, but these 6&quot; cakes are the perfect option for a small b-day bash, as a gift for a friend, to let your kid at college know you're thinking of them, or if you just want to celebrate. <br>
+      Take your pick between chocolate or yellow crumb, chocolate or vanilla frosting, and the extras to celebrate like sprinkles, swirls, and drips. Or go with one of the signature combinations below that are sure to be a hit!</p>
       <div class="grid">
         <!-- Card 1 -->
         <article class="card">
           <img src="images/sprinkled.jpg" alt="6-inch cake covered in rainbow sprinkles" loading="lazy" data-full="images/sprinkled.jpg" />
           <div class="body">
             <h3>Sprinkles!</h3>
-            <p class="desc">Yellow or Chocolate cake, with vanilla or chocolate frosting.  Covered with an insane amount of sprinkles for a classic celebration.</p>
+            <p class="desc">Yellow or Chocolate cake, with vanilla or chocolate frosting. Covered with an insane amount of sprinkles for a classic celebration.</p>
           </div>
         </article>
         <!-- Card 2 -->
@@ -301,7 +303,7 @@
           <img src="images/chocolate.jpg" alt="Chocolate birthday cake with chocolate sprinkles" loading="lazy" data-full="images/chocolate.jpg" />
           <div class="body">
             <h3>Chocochocochocolate</h3>
-            <p class="desc">Chocolate Cake. Chocolate frosting.  Chocolate sprinkles.  Chocolate ganache.  And more chocolate frosting and sprinkles for that person that just loves chocolate a little too much.</p>
+            <p class="desc">Chocolate Cake. Chocolate frosting. Chocolate sprinkles. Chocolate ganache. And more chocolate frosting and sprinkles for that person that just loves chocolate a little too much.</p>
           </div>
         </article>
         <!-- Card 3 -->
@@ -322,7 +324,57 @@
         </article>
       </div>
     </section>
-    
+
+    <!-- Cookies (new section) -->
+    <section id="cookies" class="wrap" aria-labelledby="cookies-title">
+      <h2 id="cookies-title">Cookies</h2>
+      <p class="sub">Fresh-baked, small-batch cookies. Mix & match by the dozen.</p>
+      <div class="grid">
+        <article class="card">
+          <img src="images/cookie-chocolate-chip.jpg" alt="Chocolate chip cookies with gooey centers" loading="lazy" data-full="images/cookie-chocolate-chip.jpg" />
+          <div class="body">
+            <h3>Brown Butter Chocolate Chip</h3>
+            <p class="desc">Toasty brown butter, puddles of chocolate, and a pinch of flaky salt.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/cookie-snickerdoodle.jpg" alt="Snickerdoodle cookies rolled in cinnamon sugar" loading="lazy" data-full="images/cookie-snickerdoodle.jpg" />
+          <div class="body">
+            <h3>Snickerdoodle</h3>
+            <p class="desc">Soft and chewy with a cinnamon-sugar crackle.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/cookie-mnm.jpg" alt="M&M-studded cookies" loading="lazy" data-full="images/cookie-mnm.jpg" />
+          <div class="body">
+            <h3>Brown Butter M&amp;M</h3>
+            <p class="desc">Colorful crunch meets nutty brown butter. A crowd favorite.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/cookie-sugar-decorated.jpg" alt="Decorated sugar cookies with royal icing" loading="lazy" data-full="images/cookie-sugar-decorated.jpg" />
+          <div class="body">
+            <h3>Decorated Sugar</h3>
+            <p class="desc">Buttery cut-outs finished with seasonal royal icing designs.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/cookie-oatmeal.jpg" alt="Oatmeal raisin cookies" loading="lazy" data-full="images/cookie-oatmeal.jpg" />
+          <div class="body">
+            <h3>Oatmeal Raisin</h3>
+            <p class="desc">Chewy oats, warm spices, and plump raisins for classic comfort.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="images/cookie-peanut-butter.jpg" alt="Peanut butter cookies with criss-cross pattern" loading="lazy" data-full="images/cookie-peanut-butter.jpg" />
+          <div class="body">
+            <h3>Peanut Butter</h3>
+            <p class="desc">Rich, nutty, and melt-in-your-mouth with that signature criss-cross.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <!-- How to order -->
     <section id="order" class="wrap" aria-labelledby="order-title">
       <h2 id="order-title">How to order</h2>
